@@ -1,16 +1,32 @@
+'use client';
+
+import Link from "next/link";
+import {usePathname} from "next/navigation";
+import clsx from "clsx";
+import Image from "next/image";
+
 export default function Navbar() {
+  const pathname = usePathname();
+
   return (
     <nav className="navbar bg-base-300 max-h-[88px]">
       <div className="max-w-4xl mx-auto w-[100%]">
         <div className="flex justify-between w-[100%] items-center">
           <div>
-            <a className="btn btn-ghost text-xl">fbex</a>
+            {/*<Link href="/" className="btn btn-ghost text-xl">fbex</Link>*/}
+            <Image src="/fbex-small.svg" width={100} height={100} alt="fbex logo" />
           </div>
           <div>
             <ul className="menu menu-horizontal px-1 items-center">
-              <li><a>Home</a></li>
-              <li><a>Blog</a></li>
-              <li><a>Projects</a></li>
+              <li>
+                <Link href="/" className={clsx({'active': pathname === '/'})}>Home</Link>
+              </li>
+              <li>
+                <Link href="/notes" className={clsx({'active': pathname === '/notes'})}>Notes</Link>
+              </li>
+              <li>
+                <Link href="https://github.com/fbex" target="_blank">Projects</Link>
+              </li>
               <li>
                 <label className="swap swap-rotate">
                   {/* this hidden checkbox controls the state */}
