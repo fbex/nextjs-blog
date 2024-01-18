@@ -13,8 +13,7 @@ export default function Navbar() {
       <div className="max-w-4xl mx-auto w-[100%]">
         <div className="flex justify-between w-[100%] items-center">
           <div>
-            {/*<Link href="/" className="btn btn-ghost text-xl">fbex</Link>*/}
-            <Image src="/fbex-small.svg" width={100} height={100} alt="fbex logo" />
+            <Image src="/fbex-small.svg" width={130} height={100} alt="fbex logo" />
           </div>
           <div>
             <ul className="menu menu-horizontal px-1 items-center">
@@ -22,7 +21,7 @@ export default function Navbar() {
                 <Link href="/" className={clsx({'active': pathname === '/'})}>Home</Link>
               </li>
               <li>
-                <Link href="/notes" className={clsx({'active': pathname === '/notes'})}>Notes</Link>
+                <Link href={"/notes"} className={clsx({'active': pathname === '/notes'})}>Notes</Link>
               </li>
               <li>
                 <Link href="https://github.com/fbex" target="_blank">Projects</Link>
