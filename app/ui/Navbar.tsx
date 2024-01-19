@@ -1,7 +1,7 @@
 'use client';
 
 import Link from "next/link";
-import {usePathname} from "next/navigation";
+import { usePathname } from "next/navigation";
 import clsx from "clsx";
 import Image from "next/image";
 
@@ -21,7 +21,7 @@ export default function Navbar() {
                 <Link href="/" className={clsx({'active': pathname === '/'})}>Home</Link>
               </li>
               <li>
-                <Link href={"/notes"} className={clsx({'active': pathname === '/notes'})}>Notes</Link>
+                <Link href={"/notes"} className={clsx({'active': pathname.startsWith('/notes')})}>Notes</Link>
               </li>
               <li>
                 <Link href="https://github.com/fbex" target="_blank">Projects</Link>
