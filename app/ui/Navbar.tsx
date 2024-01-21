@@ -8,6 +8,7 @@ import NavDropdown from "@/app/ui/NavDropdown";
 
 export default function Navbar() {
   const pathname = usePathname();
+  const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
   const links = [
     <Link key="homeLink" href="/" className={clsx({'active': pathname === '/'})}>Home</Link>,
     <Link key="notesLink" href={"/notes"} className={clsx({'active': pathname.startsWith('/notes')})}>Notes</Link>,
@@ -33,7 +34,7 @@ export default function Navbar() {
               <li>
                 <label className="swap swap-rotate">
                   {/* this hidden checkbox controls the state */}
-                  <input type="checkbox" className="theme-controller" value="light" />
+                  <input type="checkbox" className="theme-controller" value={isDarkMode ? 'light' : 'dark'} />
                   {/* sun icon */}
                   <svg className="swap-on fill-current w-6 h-6" xmlns="http://www.w3.org/2000/svg"
                        viewBox="0 0 24 24">
