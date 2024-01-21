@@ -8,7 +8,7 @@ import NavDropdown from "@/app/ui/NavDropdown";
 
 export default function Navbar() {
   const pathname = usePathname();
-  const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+  const isDarkMode = typeof window !== "undefined" ? window.matchMedia('(prefers-color-scheme: dark)').matches : true
   const links = [
     <Link key="homeLink" href="/" className={clsx({'active': pathname === '/'})}>Home</Link>,
     <Link key="notesLink" href={"/notes"} className={clsx({'active': pathname.startsWith('/notes')})}>Notes</Link>,
