@@ -19,7 +19,9 @@ export default function Navbar() {
       <div className="max-w-4xl mx-auto w-[100%]">
         <div className="flex justify-between w-[100%] items-center">
           <div>
-            <Image src="/fbex-small.svg" width={130} height={100} alt="fbex logo" />
+            <Link href="/">
+              <Image src="/fbex-small.svg" width={130} height={100} alt="fbex logo" />
+            </Link>
           </div>
           <div>
             <ul className="menu menu-horizontal px-1 items-center">
