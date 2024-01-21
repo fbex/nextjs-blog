@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Footer() {
   return (
     <footer className="footer footer-center p-10 bg-primary text-primary-content max-h-[250px]">
@@ -10,7 +12,14 @@ export default function Footer() {
         <p className="font-bold">
           fbex.io
         </p>
-        <p>Content licensed under CC-BY-4.0, 2013 – 2024.</p>
+        <p>
+          Content is licensed under
+          <Link href="http://creativecommons.org/licenses/by/4.0" className="inline-block">
+            &nbsp;CC-BY-4.0
+            {/*<Image src="/by.svg" className="ml-0.5 mt-[1px] float-right" width={17} height={17} alt="" />*/}
+            {/*<Image src="/cc.svg" className="ml-0.5 mt-[1px] float-right" width={17} height={17} alt="" />*/}
+          </Link>
+        </p>
       </aside>
       <nav>
         <div className="grid grid-flow-col gap-4">
