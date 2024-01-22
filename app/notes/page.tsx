@@ -1,5 +1,10 @@
 import Link from "next/link";
 import { getAllPosts } from "@/app/notes/get-posts";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: 'Notes',
+};
 
 export default async function Page() {
   const posts = await getAllPosts()

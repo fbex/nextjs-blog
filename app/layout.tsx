@@ -9,7 +9,10 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 const inter = Inter({subsets: ['latin']})
 
 export const metadata: Metadata = {
-  title: 'fbex.io',
+  title: {
+    template: '%s | fbex.io',
+    default: 'fbex.io',
+  },
   description: 'Building software and writing about stuff.',
 }
 
