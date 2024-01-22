@@ -38,3 +38,5 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 ## Notes
 
 Logo SVGs created with [maketext.io](https://maketext.io/).
+
+Icons from [xicons](https://www.xicons.org).
