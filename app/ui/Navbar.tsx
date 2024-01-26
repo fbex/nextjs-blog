@@ -21,7 +21,7 @@ export default function Navbar() {
         <div className="flex justify-between w-[100%] items-center">
           <div>
             <Link href="/">
-              <Image src="/fbex-small.svg" width={130} height={100} alt="fbex logo" />
+              <Image src="/fbex-filled.svg" width={130} height={100} alt="fbex logo" />
             </Link>
           </div>
           <div>
