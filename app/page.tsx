@@ -7,7 +7,7 @@ export default function Page() {
       <div className="hero min-h-[calc(100vh-250px-88px)] bg-base-200">
         <div className="hero-content text-center">
           <div className="max-w-md">
-            <Image src="/fbex.svg" width={600} height={600} alt="fbex logo" />
+            <Image src="/fbex.svg" width={600} height={600} alt="fbex logo" priority={true} />
             <div className="grid text-center sm:max-w-5xl sm:grid-cols-2 sm:text-left sm:mx-11">
               <Link
                 href={'/notes'}
